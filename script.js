@@ -66,3 +66,11 @@ function displayEmployee(emp) {
     `;
 }
 
+
+function saveToLocalStorage(employee) {
+    let employees = JSON.parse(localStorage.getItem("EmployeePayrollList")) || [];
+    employees.push(employee);
+    localStorage.setItem("EmployeePayrollList", JSON.stringify(employees));
+}
+
+
