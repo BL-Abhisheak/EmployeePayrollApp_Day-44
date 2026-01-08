@@ -74,3 +74,13 @@ function saveToLocalStorage(employee) {
 }
 
 
+form.addEventListener("reset", () => {
+    document.querySelector(".result-section").innerHTML =
+        "<p>Your details here...</p>";
+
+    document.querySelectorAll("input").forEach(input => {
+        input.style.border = "";
+    });
+});
+
+
